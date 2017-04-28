@@ -30,6 +30,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Copy Photo"/>
+                                <connections>
+                                    <action selector="copyPhotoClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lAD-4r-mnx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVd-Nh-KlT">
                                 <rect key="frame" x="157.66666666666669" y="36" width="98.666666666666686" height="20.666666666666664"/>
@@ -54,30 +57,45 @@
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="First"/>
+                                        <connections>
+                                            <action selector="firstClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efJ-hW-dku"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygR-ZR-Ec6">
                                         <rect key="frame" x="67.333333333333343" y="0.0" width="65.000000000000028" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Next"/>
+                                        <state key="normal" title="Previous"/>
+                                        <connections>
+                                            <action selector="previousClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wA6-6v-mxb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGM-at-fFr">
                                         <rect key="frame" x="134.33333333333334" y="0.0" width="65.333333333333314" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Previous"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rb2-cQ-yZF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nl-xI-gcN">
                                         <rect key="frame" x="201.66666666666669" y="0.0" width="65.000000000000057" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Last"/>
+                                        <connections>
+                                            <action selector="lastClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RMA-iw-w1X"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hj-m6-PYg">
                                         <rect key="frame" x="268.66666666666674" y="0.0" width="65.333333333333314" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hia-5k-nBK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -110,6 +128,15 @@
                             <constraint firstItem="6Wy-1U-7xZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="vz8-od-qxf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="albumImaj" destination="xg3-eT-yIu" id="GSK-t4-Im5"/>
+                        <outlet property="deleteButton" destination="9hj-m6-PYg" id="eek-J6-UgR"/>
+                        <outlet property="firstButton" destination="CVz-zF-d21" id="Kwr-dK-1Jd"/>
+                        <outlet property="lastButton" destination="4nl-xI-gcN" id="ewz-ly-iwR"/>
+                        <outlet property="mainImaj" destination="6Wy-1U-7xZ" id="bGE-DM-Qdq"/>
+                        <outlet property="nextButton" destination="jGM-at-fFr" id="1Ug-dO-zgT"/>
+                        <outlet property="previousButton" destination="ygR-ZR-Ec6" id="ApF-4o-VLp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
